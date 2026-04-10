@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,29 +106,23 @@
     }
     .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
 
-    /* Image area — placeholder shown until you add a real <img> */
     .card-img-wrap {
       width: 100%; aspect-ratio: 4/3;
       background: linear-gradient(135deg, #EDE8E1 0%, #D5CBC0 100%);
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 8px; position: relative; overflow: hidden;
+      position: relative; overflow: hidden;
     }
-    /* When you add a real image, it will fill the box automatically */
     .card-img-wrap img {
       width: 100%; height: 100%; object-fit: cover;
-      display: block; position: absolute; inset: 0;
+      display: block; transition: transform 0.4s ease;
     }
-    .placeholder-icon { font-size: 3rem; line-height: 1; }
-    .placeholder-text {
-      font-size: 0.72rem; color: var(--mid);
-      background: rgba(255,255,255,0.75); padding: 3px 10px;
-      border-radius: 100px; font-weight: 500;
-    }
+    .product-card:hover .card-img-wrap img { transform: scale(1.04); }
+
     .card-num {
       position: absolute; top: 12px; left: 12px;
       background: var(--charcoal); color: #fff;
       font-size: 0.72rem; font-weight: 700;
       padding: 3px 9px; border-radius: 100px; letter-spacing: 0.04em;
+      z-index: 2;
     }
 
     .card-body { padding: 18px 18px 16px; flex: 1; display: flex; flex-direction: column; }
@@ -199,11 +194,15 @@
 
   <div class="product-grid">
 
+    <!-- 1 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Adjustable Bamboo Drawer Dividers for kitchen utensil and drawer organization">
-        <!-- TO ADD IMAGE: delete the two lines below and add: <img src="https://github.com/homamdraji/kitchen/blob/main/images/Adjustable%20Bamboo%20Drawer%20Dividers.jpgc" alt="Photo of Adjustable Bamboo Drawer Dividers for kitchen organization" loading="lazy" /> -->
-        <img src="https://github.com/homamdraji/kitchen/blob/main/images/AdjustableBambooDrawerDividers.jpg"/>
+      <div class="card-img-wrap">
         <span class="card-num">#1</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/AdjustableBambooDrawerDividers.jpg"
+          alt="Photo of Adjustable Bamboo Drawer Dividers for kitchen utensil and cutlery organization"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Drawer</div>
@@ -213,11 +212,15 @@
       </div>
     </article>
 
+    <!-- 2 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Heavy-Duty Pots and Pans Organizer Rack for kitchen cabinet storage">
-        <span class="placeholder-icon">🍳</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#2</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/PotsandPansOrganizerRack.jpg"
+          alt="Photo of Heavy-Duty Pots and Pans Organizer Rack for kitchen cabinet storage"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Cabinet</div>
@@ -227,11 +230,15 @@
       </div>
     </article>
 
+    <!-- 3 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Expandable 3-Tier Spice Rack Step Shelf for spice cabinet organization">
-        <span class="placeholder-icon">🧂</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#3</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/ExpandableSpiceRackStepShelf.jpg"
+          alt="Photo of Expandable 3-Tier Spice Rack Step Shelf for spice cabinet organization"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Cabinet</div>
@@ -241,11 +248,15 @@
       </div>
     </article>
 
+    <!-- 4 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Under-Cabinet Wine Glass Rack for stemware storage and cabinet space saving">
-        <span class="placeholder-icon">🍷</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#4</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/UnderCabinetWineGlassRack.jpg"
+          alt="Photo of Under-Cabinet Wine Glass Rack for stemware storage and cabinet space saving"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Cabinet</div>
@@ -255,11 +266,15 @@
       </div>
     </article>
 
+    <!-- 5 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Rotating Corner Lazy Susan Turntable Organizer for deep kitchen cabinets">
-        <span class="placeholder-icon">🔄</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#5</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/CornerLazySusan.jpg"
+          alt="Photo of Rotating Corner Lazy Susan Turntable Organizer for deep kitchen cabinets"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Cabinet</div>
@@ -280,11 +295,15 @@
 
   <div class="product-grid">
 
+    <!-- 6 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Airtight Clear Grain Containers for pantry cereal, pasta and dry food storage">
-        <span class="placeholder-icon">🫙</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#6</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/AirtightClearGrainContainers.jpg"
+          alt="Photo of Airtight Clear Grain Containers for pantry cereal, pasta and dry food storage"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Pantry</div>
@@ -294,11 +313,15 @@
       </div>
     </article>
 
+    <!-- 7 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Stackable Wire Baskets for pantry vegetable, onion and snack storage">
-        <span class="placeholder-icon">🧺</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#7</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/StackableWireBaskets.jpg"
+          alt="Photo of Stackable Wire Baskets for pantry vegetable, onion and snack storage"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Pantry</div>
@@ -308,11 +331,15 @@
       </div>
     </article>
 
+    <!-- 8 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Over-the-Door Pantry Organizer multi-tier hanging rack for food and supply storage">
-        <span class="placeholder-icon">🚪</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#8</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/OvertheDoorPantryOrganizer.jpg"
+          alt="Photo of Over-the-Door Pantry Organizer multi-tier hanging rack for food and supply storage"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Pantry</div>
@@ -322,11 +349,15 @@
       </div>
     </article>
 
+    <!-- 9 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Bamboo Food Bag Storage Organizer with slots for Gallon, Quart, Sandwich and Snack bags">
-        <span class="placeholder-icon">🗂️</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#9</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/BambooFoodStorageBagOrganizer.jpg"
+          alt="Photo of Bamboo Food Bag Storage Organizer with slots for Gallon, Quart, Sandwich and Snack bags"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Drawer / Pantry</div>
@@ -336,11 +367,15 @@
       </div>
     </article>
 
+    <!-- 10 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Gravity-Fed Can Beverage Dispenser rolling rack for fridge or pantry organization">
-        <span class="placeholder-icon">🥤</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#10</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/CanBeverageDispenser.jpg"
+          alt="Photo of Gravity-Fed Can Beverage Dispenser rolling rack for fridge or pantry organization"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Fridge / Pantry</div>
@@ -361,11 +396,15 @@
 
   <div class="product-grid">
 
+    <!-- 11 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Over-the-Sink Roll-Up Stainless Steel Dish Drying Rack for kitchen sink organization">
-        <span class="placeholder-icon">🫧</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#11</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/OvertheSinkRollUpDryingRack.jpg"
+          alt="Photo of Over-the-Sink Roll-Up Stainless Steel Dish Drying Rack for kitchen sink organization"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Sink</div>
@@ -375,11 +414,15 @@
       </div>
     </article>
 
+    <!-- 12 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Adhesive 2-Tier Under-Sink Sliding Drawer Organizer for cleaning supplies and sponge storage">
-        <span class="placeholder-icon">🧹</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#12</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/AdhesiveUnderSinkOrganizer.jpg"
+          alt="Photo of Adhesive 2-Tier Under-Sink Sliding Drawer Organizer for cleaning supplies and sponge storage"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Under-Sink</div>
@@ -389,11 +432,15 @@
       </div>
     </article>
 
+    <!-- 13 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Wall-Mounted Magnetic Knife Strip in walnut or stainless steel for kitchen countertop knife storage">
-        <span class="placeholder-icon">🔪</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#13</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/MagneticKnifeStrip.jpg"
+          alt="Photo of Wall-Mounted Magnetic Knife Strip in walnut or stainless steel for kitchen countertop knife storage"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Countertop / Wall</div>
@@ -403,11 +450,15 @@
       </div>
     </article>
 
+    <!-- 14 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Wall-Mount or Under-Cabinet Paper Towel Holder with Top Shelf for kitchen organization">
-        <span class="placeholder-icon">🧻</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#14</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/PaperTowelHolderwithShelf.jpg"
+          alt="Photo of Wall-Mount or Under-Cabinet Paper Towel Holder with Top Shelf for kitchen organization"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Countertop / Wall</div>
@@ -417,11 +468,15 @@
       </div>
     </article>
 
+    <!-- 15 -->
     <article class="product-card">
-      <div class="card-img-wrap" role="img" aria-label="Photo of Glass Meal Prep Containers with Locking Lids matching set for fridge freezer and oven use">
-        <span class="placeholder-icon">🥗</span>
-        <span class="placeholder-text">Add product image here</span>
+      <div class="card-img-wrap">
         <span class="card-num">#15</span>
+        <img
+          src="https://raw.githubusercontent.com/homamdraji/kitchen/main/images/GlassMealPrepContainers.jpg"
+          alt="Photo of Glass Meal Prep Containers with Locking Lids matching set for fridge, freezer and oven use"
+          loading="lazy"
+        />
       </div>
       <div class="card-body">
         <div class="card-cat">Fridge / Freezer</div>
